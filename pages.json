@@ -35,6 +35,23 @@
             }
             
         }
+        ,{
+            "path" : "src/tabbar/school/school",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "src/tabbar/myPage/myPage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -49,20 +66,35 @@
 	    "borderStyle": "black",
 	    "backgroundColor": "#ffffff",
 	    "list": [{
-	        "pagePath": "src/tabbar/me/me",
-	        "iconPath": "static/bussiness-man.png",
-	        "selectedIconPath": "static/bussiness-man.png",
-	        "text": "我的"
-	    }, {
 	        "pagePath": "src/tabbar/home/home",
 	        "iconPath": "static/bussiness-man.png",
 	        "selectedIconPath": "static/bussiness-man.png",
 	        "text": "主页"
-	    }, {
-	        "pagePath": "src/tabbar/message/message",
+	    },
+		{
+		    "pagePath": "src/tabbar/message/message",
+		    "iconPath": "static/bussiness-man.png",
+		    "selectedIconPath": "static/bussiness-man.png",
+		    "text": "信息"
+		},
+		{
+		    "pagePath": "src/tabbar/school/school",
+		    "iconPath": "static/bussiness-man.png",
+		    "selectedIconPath": "static/bussiness-man.png",
+		    "text": "校友圈"
+		},
+		{
+		    "pagePath": "src/tabbar/myPage/myPage",
+		    "iconPath": "static/bussiness-man.png",
+		    "selectedIconPath": "static/bussiness-man.png",
+		    "text": "个人主页"
+		},
+		
+		{
+	        "pagePath": "src/tabbar/me/me",
 	        "iconPath": "static/bussiness-man.png",
 	        "selectedIconPath": "static/bussiness-man.png",
-	        "text": "信息"
+	        "text": "我的"
 	    }
 		]
 	}

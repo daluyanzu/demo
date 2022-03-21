@@ -1,12 +1,12 @@
 <template>
-	<view style="width: 90%;height: 600rpx;background-color: pink;">
-		<scroll-view scroll-y="true" style="height: 300rpx;">
-			<view style="border:1rpx solid #8F8F94;width: 100%;" v-for="item in myList" :key="item.time">
-				<text v-if="item.id == 'Sam'" style="float: right;clear:both;">{{ item.id }}&nbspsay:\n&nbsp&nbsp{{ item.msg }}</text>
-				<text v-if="item.id !== 'Sam'" style="float: left;clear:both;">{{ item.id }}&nbspsay:\n&nbsp&nbsp{{ item.msg }}</text>
+	<view style="width: 100%;height:100%;">
+		<scroll-view scroll-y="true" style="height: 250rpx;">
+			<view style="border:1rpx solid #8F8F94;height: 40%; width: 100%;" v-for="item in myList" :key="item.time">
+				<text v-if="item.id == '李石雪'" style="float: right;clear:both;">{{ item.id }}:&nbsp\n&nbsp&nbsp{{ item.msg }}</text>
+				<text v-if="item.id !== '李石雪'" style="float: left;clear:both;">{{ item.id }}:&nbsp\n&nbsp&nbsp{{ item.msg }}</text>
 			</view>
 		</scroll-view>
-		<view style="height: 300rpx;background-color: white;"><textarea value="" @confirm="send1" placeholder="" @input="onInput" /></view>
+		<view style="height: 150rpx;background-color: white;"><textarea value="" @confirm="send1" placeholder="" @input="onInput" /></view>
 	</view>
 </template>
 
@@ -17,37 +17,33 @@ export default {
 		return {
 			myList: [
 				{
-					id: 'li',
+					id: '王建国',
 					time: '202101011231',
 					msg: 'hello'
 				},
 				{
-					id: 'li',
+					id: '王建国',
 					time: '202101031231',
 					msg: 'hello'
 				},
 				{
-					id: 'Sam',
+					id: '李石雪',
 					time: '202101041231',
 					msg: 'hello'
 				},
 				{
-					id: 'Sam',
+					id: '李石雪',
 					time: '202101021231',
 					msg: 'hello'
 				},
 				{
-					id: 'Sam',
+					id: '李石雪',
 					time: '2021010213231',
 					msg: 'hello'
 				},
+				
 				{
-					id: 'Sam',
-					time: '2021010212311',
-					msg: 'hello'
-				},
-				{
-					id: 'li',
+					id: '王建国',
 					time: '202101101231',
 					msg: 'bye'
 				},

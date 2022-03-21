@@ -7,6 +7,17 @@
 			}
 		},
 		{
+		    "path" : "pages/share/share",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		
+		{
 			"path":"src/tabbar/me/me",
 			"style": {
 				"navigationBarTitleText": "uni-app"
@@ -51,6 +62,19 @@
                 "enablePullDownRefresh": false
             }
             
+        },
+		
+        
+         
+       
+        {
+            "path" : "custom-tab-bar/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {
@@ -61,6 +85,7 @@
 	},
 	
 	"tabBar": {
+		"custom":true,
 	    "color": "#7A7E83",
 	    "selectedColor": "#3cc51f",
 	    "borderStyle": "black",

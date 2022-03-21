@@ -1,58 +1,62 @@
 {
-  "pages": [
-    "src/tabbar/home/home",
-    "src/tabbar/me/me",
-    "pages/index/index",
-    "src/tabbar/message/message",
-    "src/components/chat/chat/chat",
-    "src/tabbar/school/school",
-    "src/tabbar/myPage/myPage"
-  ],
-  "subPackages": [],
-  "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
-  "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
-        "pagePath": "src/tabbar/home/home",
-        "iconPath": "static/bussiness-man.png",
-        "selectedIconPath": "static/bussiness-man.png",
-        "text": "主页"
-      },
-      {
-        "pagePath": "src/tabbar/message/message",
-        "iconPath": "static/bussiness-man.png",
-        "selectedIconPath": "static/bussiness-man.png",
-        "text": "信息"
-      },
-      {
-        "pagePath": "src/tabbar/school/school",
-        "iconPath": "static/bussiness-man.png",
-        "selectedIconPath": "static/bussiness-man.png",
-        "text": "校友圈"
-      },
-      {
-        "pagePath": "src/tabbar/myPage/myPage",
-        "iconPath": "static/bussiness-man.png",
-        "selectedIconPath": "static/bussiness-man.png",
-        "text": "个人主页"
-      },
-      {
-        "pagePath": "src/tabbar/me/me",
-        "iconPath": "static/bussiness-man.png",
-        "selectedIconPath": "static/bussiness-man.png",
-        "text": "我的"
-      }
-    ]
-  },
-  "permission": {},
-  "usingComponents": {}
+    "pages": [
+        "src/tabbar/home/home",
+        "pages/share/share",
+        "src/tabbar/me/me",
+        "pages/index/index",
+        "src/tabbar/message/message",
+        "src/components/chat/chat/chat",
+        "src/tabbar/school/school",
+        "src/tabbar/myPage/myPage",
+        "custom-tab-bar/index"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#7A7E83",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "src/tabbar/home/home",
+                "iconPath": "static/bussiness-man.png",
+                "selectedIconPath": "static/bussiness-man.png",
+                "text": "主页"
+            },
+            {
+                "pagePath": "src/tabbar/message/message",
+                "iconPath": "static/bussiness-man.png",
+                "selectedIconPath": "static/bussiness-man.png",
+                "text": "信息"
+            },
+            {
+                "pagePath": "src/tabbar/school/school",
+                "iconPath": "static/bussiness-man.png",
+                "selectedIconPath": "static/bussiness-man.png",
+                "text": "校友圈"
+            },
+            {
+                "pagePath": "src/tabbar/myPage/myPage",
+                "iconPath": "static/bussiness-man.png",
+                "selectedIconPath": "static/bussiness-man.png",
+                "text": "个人主页"
+            },
+            {
+                "pagePath": "src/tabbar/me/me",
+                "iconPath": "static/bussiness-man.png",
+                "selectedIconPath": "static/bussiness-man.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "permission": {},
+    "usingComponents": {},
+    "sitemapLocation": "sitemap.json"
 }

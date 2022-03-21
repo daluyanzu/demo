@@ -1,7 +1,7 @@
 <template>
 	<view style="width: 100%;height: 100%;">
 		<view class="home-header" style="width: 100%;height:60rpx;background-color: #8F8F94;"></view>
-		<view class="home-video" style="width: 100;height: 100%;background-color: #4CD964;" @touchstart="touchStart" @touchend="touchEnd">
+		<view class="home-video" style="width: 100;height: 100%;" @touchstart="touchStart" @touchend="touchEnd">
 			
 			
 			

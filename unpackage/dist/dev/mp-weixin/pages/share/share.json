@@ -2,6 +2,6 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "chat": "/src/components/chat/chat/chat"
+    "tabbar": "/custom-tab-bar/index"
   }
 }

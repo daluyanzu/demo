@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tabbar": "/custom-tab-bar/index",
+    "navbar": "/components/nav-bar",
+    "chat": "/components/chat"
+  }
+}

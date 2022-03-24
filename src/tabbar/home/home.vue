@@ -1,20 +1,20 @@
 <template>
 	<view style="width: 100%;height: 100%;">
-		<view class="home-header" style="width: 100%;height:60rpx;background-color: #8F8F94;"></view>
-		<view class="home-video" style="width: 100;height: 100%;" @touchstart="touchStart" @touchend="touchEnd">
-			
-			
+		<navbar></navbar>
+		<!-- <view class="home-header" style="width: 100%;height:60rpx;background-color: #8F8F94;"></view> -->
+		<!-- <view class="home-video" style="width: 100;height: 100%;" @touchstart="touchStart" @touchend="touchEnd"> -->
+		<view class="video">
+			<text>视频</text>
+		</view>
 			
 		</view>
-		
 	</view>
 </template>
 
 <script>
-	import chat from '../../components/chat/chat/chat.vue'
-	
+	import navbar from '../../../components/nav-bar.vue'
 	export default {
-		components:{chat},
+		components:{navbar},
 		data() {
 			return {
 				startX:0,
@@ -60,7 +60,20 @@
 
 <style>
 	page{
-		width: 100%;height: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: #cccccc;
+	}
+	
+	.video{
+		width: 90%;
+		height: 1200rpx;
+		background-color: #FFFFFF;
+		margin: 0 auto;
+		margin-top: 50rpx;
+		text-align: center;
+		line-height: 1000rpx;
+		font-size: 100rpx;
 	}
 
 </style>

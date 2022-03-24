@@ -1,19 +1,19 @@
 <template>
 	<view class="me-body" style="width: 100%;height: 100%;" >
 		<!-- <u-mask> -->
-			<view  v-show="show" style="width: 50%;height: 30%;background-color: #007AFF;position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%); ">
-				<view class="friend-img" style="position: relative;"></view>
+			<!-- <view  v-show="show" style="width: 50%;height: 30%;background-color: #007AFF;position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%); ">
+				<view class="friend-img" style="position: relative;"></view> -->
 				<!-- <button type="default" style="position: absolute;bottom: 0;left: 50%;
 		transform: translateX(-50%);" @click.stop="letschat()">私聊</button> -->
-		<view class="btn">
+		<!-- <view class="btn">
 			<button type="default" @click.stop="letschat()">私聊</button>
 		</view>
 			</view>
 			<view class="chat-view" v-show="showFlag">
 				<Chat ></Chat>
-			</view>
+			</view> -->
 		<!-- </u-mask> -->
-		<view class="me-header" style="width: 100%;height:100rpx;background-color: #8F8F94;"></view>
+		<view class="me-header" style="width: 100%;height:100rpx;background-color: #8F8F94;"><navbar></navbar></view>
 		<view class="me-message" style="width: 100%;height:550rpx;position: relative;">
 			<view class="me-img" style="width: 130rpx;height: 130rpx;border-radius: 50%;border: 1rpx solid #999999; position: absolute;top: 5%;left: 5%;">
 				<image src="../../../static/bussiness-man.png" mode=""></image>	
@@ -21,18 +21,44 @@
 			<view class="name">
 					<text class="my-name">王建国</text><br>
 					<text class="my-school">清华/计算机/本科/3年经验</text>
+					
+					<view class="friend-options">
+						<view class="both-friend" @click="friendslists()">
+						<view class="me-myFriends" @click.stop="showFriend()" style="width: 25%;height: 90%;border-radius: 50%;border: 1rpx solid #333333;">
+							<image  src="../../../static/bussiness-man.png" mode=""></image>
+						</view>
+						<view class="me-myFriends" style="width: 25%;height: 90%;border-radius: 50%;border: 1rpx solid #333333;">
+							<image  src="../../../static/bussiness-man.png" mode=""></image>
+						</view>
+						<view class="me-myFriends" style="width: 25%;height: 90%;border-radius: 50%;border: 1rpx solid #333333;">
+							<image  src="../../../static/bussiness-man.png" mode=""></image>
+						</view>
+					</view>
+					<view class="recommend-friend" @click="friendslists()" >
+						<view class="me-myFriends"  style="width: 25%;height: 90%;border-radius: 50%;border: 1rpx solid #333333;">
+							<image  src="../../../static/bussiness-man.png" mode=""></image>
+						</view>
+						<view class="me-myFriends" style="width: 25%;height: 90%;border-radius: 50%;border: 1rpx solid #333333;">
+							<image  src="../../../static/bussiness-man.png" mode=""></image>
+						</view>
+						<view class="me-myFriends" style="width: 25%;height: 90%;border-radius: 50%;border: 1rpx solid #333333;">
+							<image  src="../../../static/bussiness-man.png" mode=""></image>
+						</view>
+					</view>
+					</view>
+					
 				</view>
 				
-				<view class="my-skill-pic" style="width: 300rpx;height: 150rpx;background-color: #38d1ff;position: absolute; bottom:40rpx ;right:5% ;">
+				<view class="my-skill-pic" style="width: 330rpx;height: 250rpx;background-color: #38d1ff;position: absolute; bottom:40rpx ;right:5% ;">
 					个人能力图
 				</view>
-			<view class="me-introduce" style="width: 100%; position: absolute;top: 115rpx;">
+			<view class="me-introduce" style="width: 100%; position: absolute;top: 210rpx;">
 				<text>人大人科学研究所</text><br>
 				<text>人大人科学研究所某路某楼</text><br>
 				<text>中国，成都</text>
 			</view>
 			
-			<button @click.stop="goShare()"  style="width: 25%;height: 15%;position:absolute;bottom: 40rpx;left: 5%;"  >发布</button>
+			<button @click.stop="goShare()"  style="width: 25%;height: 15%;position:absolute;bottom: 40rpx;left: 5%;background-color: #007AFF;"  >发布</button>
 		</view>
 		
 		<view class="me-skill" style="width: 100%;height:100%;background-color: #3F536E;">
@@ -55,23 +81,38 @@
 				
 			</view>
 		</view>
-		<view class="me-friends" style="width: 10%;height:300rpx;background-color: white;position: fixed;top: 15%;right: 5%; display: flex;flex-flow: column;justify-content: space-between; box-shadow: 2rpx 2rpx 10rpx;border:#C0C0C0 1rpx solid;">
-			<view class="me-myFriends" @click.stop="showFriend()" style="width: 100%;height: 25%;border-radius: 50%;border: 1rpx solid #333333;">
-				<image  src="../../../static/bussiness-man.png" mode=""></image>
-			</view>
-			<view class="me-myFriends" style="width: 100%;height: 25%;border-radius: 50%;border: 1rpx solid #333333;">
-				<image  src="../../../static/bussiness-man.png" mode=""></image>
-			</view>
-			<view class="me-myFriends" style="width: 100%;height: 25%;border-radius: 50%;border: 1rpx solid #333333;">
-				<image  src="../../../static/bussiness-man.png" mode=""></image>
-			</view>
-			
-		</view>
+		
 		<view class="share-nine" v-show="shareFlag">
 			<view class="share-things" v-for="item in shareList" @click.stop="goShareThing()">
 				{{item.title}}
 			</view>
 			
+		</view>
+		
+		<view class="myfriends" v-show="friendsFlag">
+			<scroll-view scroll-y="true" style="height: 100%;width: 100%;">
+					<view class="v-option" v-for="item in friendslist" style="margin: 20rpx auto;height: 200rpx; border:2px solid #C0C0C0; position: relative;" >
+						
+						<view @click="goTohisPage()" class="his-img" style="border-radius: 50%; margin: 40rpx 0 0 40rpx; width: 120rpx;height: 120rpx;background-color:#eb692d;">
+							{{item.name}}
+						</view>	
+						<view class="his-message" style="border-radius: 50rpx;width: 250rpx;height: 50rpx;background-color:#3bb503;position: absolute;top: 40rpx;left: 200rpx;">
+							个人简介
+						</view>
+						<view class="his-friends" style="width: 380rpx;height: 80rpx;position: absolute;top: 110rpx;left: 200rpx; display: flex;justify-content: space-between;">
+							<view style="width: 40%;height: 100%;background-color:#aa9478;border-radius: 10%;">
+								他的好友
+							</view>
+							<view style="width: 40%;height: 100%;background-color:#a8b611;border-radius: 10%;">
+								共同好友
+							</view>
+						</view>
+						
+						
+						
+					</view>
+					
+				</scroll-view>
 		</view>
 		
 		
@@ -82,15 +123,35 @@
 
 <script>
 	import Chat from '../../components/chat/chat/chat'
+	import navbar from '../../../components/nav-bar.vue'
 export default {
-	components:{Chat},
+	components:{Chat,navbar},
 	data() {
 		return {
+			friendsFlag:false,
 			shareFlag:false,
 			flag:true,
 			animationData: {},
 			show: false,
 			showFlag:false,
+			friendslist:[{
+						id: 1,
+						name: '李石雪'
+					},
+					{
+						id: 2,
+						name: '李石'
+					},
+					{
+						id: 3,
+						name: '李雪'
+					},
+					{
+						id: 4,
+						name: '石雪'
+					},
+				
+			],
 			shareList:[
 				{
 						id: 1,
@@ -169,12 +230,24 @@ export default {
 		};
 	},
 	methods: {
+		// friendslist(){
+		// 	this.friendsFlag = !this.friendsFlag
+		// },
+		goTohisPage(){
+			uni.navigateTo({
+				url:'../../../pages/otherpage/otherpage'
+			}),
+			this.friendsFlag = false
+		},
 		
 		goShare(){
 			this.shareFlag = !this.shareFlag
 			
 			
 			
+		},
+		friendslists(){
+			this.friendsFlag = !this.friendsFlag
 		},
 			
 		goShareThing(){
@@ -221,6 +294,7 @@ export default {
 		onUnload() {
 			this.animationData = {};
 			// 页面关闭后清空数据
+			
 		},
 		onload() {
 			this.animation = uni.createAnimation();
@@ -273,6 +347,49 @@ export default {
 </script>
 
 <style>
+	.myfriends{
+		width: 85%;
+		height: 45%;
+		background-color: #466fce;
+		position: fixed;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%);
+			
+		
+	},
+	.friend-options{
+		width: 350rpx;
+		height: 50rpx;
+		
+		display: flex;
+		justify-content: space-between;
+	}
+	.both-friend{
+		width: 150rpx;
+		height: 50rpx;
+		background-color: #4CD964;
+		margin-top: 20rpx;
+		
+		display: flex;
+		
+		justify-content: space-between;
+		 border:#C0C0C0 1rpx solid;
+		 border-radius: 50rpx;
+		
+	}
+	.recommend-friend{
+		width: 150rpx;
+		height: 50rpx;
+		background-color: #4CD964;
+		margin-top: 20rpx;
+		display: flex;
+		border-radius: 50rpx;
+		justify-content: space-between;
+		
+	}
+	
+	
 	.share-nine{
 		width: 80%;
 		height: 50%;
@@ -329,7 +446,7 @@ export default {
 	button{
 		font-size: 100%;
 		line-height: 1.5;
-		background-color: #38d1ff;
+		
 	}
 	image{
 		width: 100%;

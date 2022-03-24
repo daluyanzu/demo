@@ -1,0 +1,1 @@
+<view><navbar vue-id="64a10021-1" nav_btn="{{nav_btn}}" bind:__l="__l"></navbar><tabbar vue-id="64a10021-2" selected="{{selected}}" bind:__l="__l"></tabbar></view>

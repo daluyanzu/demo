@@ -2,6 +2,7 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "chat": "/src/components/chat/chat/chat"
+    "chat": "/src/components/chat/chat/chat",
+    "navbar": "/components/nav-bar"
   }
 }

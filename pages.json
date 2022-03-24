@@ -7,6 +7,24 @@
 			}
 		},
 		{
+		    "path" : "pages/hotList/hotList",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/recruitment/recruitment",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
 		    "path" : "pages/share/share",
 		    "style" :                                                                                    
 		    {
@@ -76,7 +94,52 @@
             }
             
         }
+        ,{
+            "path" : "pages/otherpage/otherpage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
     ],
+	"subPackages": [{
+			"root": "nav/",
+			"pages": [{
+					"path": "hotlist/hotlist",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "live/live",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "recruit/recruit",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "search/search",
+					"style": {
+						// "navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "notification/notification",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

@@ -1,9 +1,10 @@
 <template>
 	<view style="width: 100%;height: 100%;">
+		
 		<view style="width: 100%;height:40%;background-color: #8F8F94;position: relative;">
-			
+			<navbar></navbar>
 			<view class="my-img">
-				
+				<image src="../../../static/bussiness-man.png" style="width: 100%;height: 100%;" mode=""></image>
 			</view>
 		</view>
 		<view style="border-radius: 10%; margin: 30rpx auto; width: 100;height: 12%;background-color: #4CD964;">
@@ -17,7 +18,9 @@
 
 
 <script>
+	import navbar from '../../../components/nav-bar.vue'
 export default {
+	components:{navbar},
 	}
 </script>
 

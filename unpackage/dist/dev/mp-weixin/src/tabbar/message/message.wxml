@@ -1,1 +1,1 @@
-<view></view>
+<view><uni-section vue-id="4a985902-1" title sub-title type bind:__l="__l" vue-slots="{{['default']}}">内容主体，可自定义内容及</uni-section></view>

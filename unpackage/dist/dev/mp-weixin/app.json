@@ -1,6 +1,8 @@
 {
     "pages": [
         "src/tabbar/home/home",
+        "pages/hotList/hotList",
+        "pages/recruitment/recruitment",
         "pages/share/share",
         "src/tabbar/me/me",
         "pages/index/index",
@@ -8,9 +10,21 @@
         "src/components/chat/chat/chat",
         "src/tabbar/school/school",
         "src/tabbar/myPage/myPage",
-        "custom-tab-bar/index"
+        "custom-tab-bar/index",
+        "pages/otherpage/otherpage"
     ],
-    "subPackages": [],
+    "subPackages": [
+        {
+            "root": "nav/",
+            "pages": [
+                "hotlist/hotlist",
+                "live/live",
+                "recruit/recruit",
+                "search/search",
+                "notification/notification"
+            ]
+        }
+    ],
     "window": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "uni-app",

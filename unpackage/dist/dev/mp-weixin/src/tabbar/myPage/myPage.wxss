@@ -1,5 +1,39 @@
 
-.share-nine{
+.myfriends{
+		width: 85%;
+		height: 45%;
+		background-color: #466fce;
+		position: fixed;
+		top: 25%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
+}.friend-options{
+		width: 350rpx;
+		height: 50rpx;
+		
+		display: flex;
+		justify-content: space-between;
+}.both-friend{
+		width: 150rpx;
+		height: 50rpx;
+		background-color: #4CD964;
+		margin-top: 20rpx;
+		
+		display: flex;
+		
+		justify-content: space-between;
+		 border:#C0C0C0 1rpx solid;
+		 border-radius: 50rpx;
+}.recommend-friend{
+		width: 150rpx;
+		height: 50rpx;
+		background-color: #4CD964;
+		margin-top: 20rpx;
+		display: flex;
+		border-radius: 50rpx;
+		justify-content: space-between;
+}.share-nine{
 		width: 80%;
 		height: 50%;
 		background-color: pink;
@@ -13,8 +47,7 @@
 		            justify-content: space-between;
 		            flex-direction: row;
 		            flex-wrap: wrap;
-}
-.share-things{
+}.share-things{
 	width: 30%;
 	height: 30%;
 	display: flex;
@@ -22,41 +55,32 @@
 	align-items: center;
 	border: #555555 1rpx solid;
 	border-radius: 10%;
-}
-.name{
+}.name{
 		position: absolute;
 		left: 190rpx;
 		top: 8%;
 		
 		width: 100%;
-}
-.my-name{
+}.my-name{
 			font-weight: 1000;
 			font-size: 30rpx;
-}
-.my-school{
+}.my-school{
 			font-weight:100;
 			font-size: 20rpx;
-}
-.frident-list{
+}.frident-list{
 			font-weight: 1000;
 			font-size: 25rpx;
-}
-.me-introduce>text{
+}.me-introduce>text{
 		font-size: 20rpx;
 		margin-left: 3%;
 		width: 100%;
-}
-button{
+}button{
 		font-size: 100%;
 		line-height: 1.5;
-		background-color: #38d1ff;
-}
-image{
+}image{
 		width: 100%;
 		height: 100%;
-}
-.friend-img{
+}.friend-img{
 		width: 50%;
 		height: 50%;
 		position: absolute;
@@ -65,8 +89,7 @@ image{
 		        transform: translateX(-50%);
 		border-radius: 50%;
 		background-color: pink;
-}
-.chat-view{
+}.chat-view{
 		width: 80%;height: 400rpx;background-color: pink;float: left;position: fixed;top: 30%;left: 50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);
 }
 	

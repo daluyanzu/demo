@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "uni-app",
   "usingComponents": {
-    "chat": "/src/components/chat/chat/chat"
+    "navbar": "/components/nav-bar"
   }
 }

@@ -5,11 +5,11 @@
 		<view class="head-img" style="width: 100%;height: 300rpx;background-color: #808080;"></view>
 		<view class="body-box" style="width: 100%;height: 100%;background-color: #C0C0C0;">
 			<view class="body-head" style="width: 100%;height: 100rpx;background-color: #C0C0C0;">
-				<view style="width: 15%;height: 60%;border-radius: 10rpx;float: left;margin-right: 20rpx;margin-top: 15rpx;background-color: #3F536E;">所有</view>
-				<view style="width: 15%;height: 60%;border-radius: 10rpx;float: left;margin-right: 20rpx;margin-top: 15rpx;background-color: #3F536E;">已投递</view>
-				<view style="width: 15%;height: 60%;border-radius: 10rpx;float: left;margin-right: 20rpx;margin-top: 15rpx;background-color: #3F536E;">未投递</view>
-				<view style="width: 10%;height: 60%;border-radius: 10rpx;float: right;margin-right: 20rpx;margin-top: 15rpx;background-color: #3F536E;">位置</view>
-				<view style="width: 10%;height: 60%;border-radius: 10rpx;float: right;margin-right: 20rpx;margin-top: 15rpx;background-color: #3F536E;">筛选</view>
+				<view style="width: 15%;height: 60%;border-radius: 10rpx;float: left;margin-right: 20rpx;margin-top: 15rpx;background-color: #678bb6;">所有</view>
+				<view style="width: 15%;height: 60%;border-radius: 10rpx;float: left;margin-right: 20rpx;margin-top: 15rpx;background-color: #678bb6;">已投递</view>
+				<view style="width: 15%;height: 60%;border-radius: 10rpx;float: left;margin-right: 20rpx;margin-top: 15rpx;background-color: #678bb6;">未投递</view>
+				<view style="width: 10%;height: 60%;border-radius: 10rpx;float: right;margin-right: 20rpx;margin-top: 15rpx;background-color: #678bb6;">位置</view>
+				<view style="width: 10%;height: 60%;border-radius: 10rpx;float: right;margin-right: 20rpx;margin-top: 15rpx;background-color: #678bb6;">筛选</view>
 			</view>
 			<view class="recommend" style="width: 90%;height: 250rpx;margin: 30rpx auto;background-color: white;border-radius: 10rpx;">
 				<view class="recommend-title">名企选择</view>
@@ -42,19 +42,20 @@
 				<view
 				v-for="item in shareList"
 				class="recommendToyuo"
-				style="width: 100%;height: 300rpx; background-color: white;  position: relative;">
+				style="width: 100%;height: 300rpx; background-color: white;  position: relative;border: 1rpx solid #808080;">
 				xx公司{{ item.title }}
 				<view class="img" style="height: 130rpx;width: 130rpx;border: 1rpx solid #333333;border-radius: 50%; margin: 30rpx 0 0 30rpx; ">
 					<image src="../../static/Customer%20management.png" style="width: 100%;height: 100%;" mode=""></image>
 				</view>
 
-				<view class="toAttend" style="width: 130rpx; height: 70rpx;background-color: #3F536E;position: absolute; right: 50rpx; top: 50%;transform: translateY(-50%);">
+				<view class="toAttend" style="width: 160rpx; height: 70rpx;background-color: #678bb6;position: absolute; right: 50rpx; top: 50%;transform: translateY(-50%);">
 					直接投递
 				</view>
 			</view>
 			</view>
 			
 		</view>
+		<tabbar></tabbar>
 	</view>
 </template>
 

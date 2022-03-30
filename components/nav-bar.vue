@@ -1,6 +1,7 @@
 <template>
-	<view>
-		<uni-nav-bar shadow="true" :fixed="true" :statusBar="true" leftWidth="1200rpx" backgroundColor="#555555">
+	<view >
+		<uni-nav-bar height="100rpx" shadow="true" :fixed="true" :statusBar="true" leftWidth="1200rpx" backgroundColor="#555555">
+			
 			<view class="left" slot="left">
 				<!-- 热榜 -->
 				<button size="mini" :class="[nav_btn==='hotlist'?'btn-active':'btn-default']" @click="navTo('hotlist')">热榜</button>
@@ -77,7 +78,7 @@
 		height: 60rpx;
 		width: 80rpx;
 		line-height: 60rpx!important;
-		border: 1rpx solid #000000;
+		
 		font-size: 17rpx !important;
 		margin-right: 10rpx;
 		border-radius: 14rpx;
@@ -86,7 +87,7 @@
 		height: 60rpx;
 		width: 80rpx;
 		line-height: 60rpx!important;
-		border: 1rpx solid #000000;
+		
 		font-size: 17rpx !important;
 		margin-right: 10rpx;
 		border-radius: 14rpx;
@@ -98,7 +99,7 @@
 	.search{
 		font-size: 17rpx !important;
 		width: 150rpx;
-		height: 50rpx;
+		height: 60rpx;
 		line-height: 50rpx;
 		border-radius: 15rpx;
 		background-color: #FFFFFF;

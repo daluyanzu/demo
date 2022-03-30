@@ -55,3 +55,66 @@
   margin-top: 9rpx;
 }
 
+
+.message-item {
+	flex: 1;
+	/* height: 80px; */
+	/* line-height: 100px; */
+	padding: 0 20rpx;
+	position: relative;
+	background-color: #fff;
+	/* border-bottom: #e3e3e3 2rpx solid; */
+	display: flex;
+	flex-direction: row;
+	padding-top: 30rpx;
+	padding-bottom: 30rpx;
+	font-family: Microsoft YaHei;
+}
+.img {
+	width: 120rpx;
+	height: 120rpx;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20rpx;
+	padding-top: 15rpx;
+}
+.time {
+	font-size: 26rpx;
+	color: #858585;
+	font-weight: 500;
+	margin-top: 15rpx;
+	text-align: right;
+}
+.title {
+	font-weight: bold;
+}
+.notification {
+	font-size: 20rpx;
+	color: #bababa;
+	margin-top: 24rpx;
+}
+.point {
+	align-items: center !important;
+	display: flex !important;
+	margin-right: 10rpx;
+	width: 20rpx;
+}
+.red-point {
+	background-color: #dc0020;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 20rpx;
+}
+.type {
+	width: 40rpx;
+	height: 40rpx;
+}
+.Type {
+	align-items: center !important;
+	display: flex !important;
+	margin-left: 58rpx;
+	margin-right: 10rpx;
+}
+

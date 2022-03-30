@@ -4,7 +4,7 @@
 		<view style="width: 100%;height:40%;background-color: #8F8F94;position: relative;">
 			<navbar></navbar>
 			<view class="my-img">
-				<image src="../../../static/bussiness-man.png" style="width: 100%;height: 100%;" mode=""></image>
+				<image src="../../../static/head.png" style="width: 100%;height: 100%;" mode=""></image>
 			</view>
 		</view>
 		<view style="border-radius: 10%; margin: 30rpx auto; width: 100;height: 12%;background-color: #4CD964;">
@@ -32,7 +32,7 @@ export default {
 		height: 210rpx;
 		width: 210rpx;
 		border-radius: 50%;
-		background-color: #007AFF;
+		
 		position: absolute;
 		right: 50rpx;
 		top: 30%;

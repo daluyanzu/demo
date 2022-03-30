@@ -1,0 +1,55 @@
+
+page{
+	background-color: #f9f9f9;
+}
+.message-item {
+	flex: 1;
+	/* height: 80px; */
+	/* line-height: 100px; */
+	padding: 0 15px;
+	position: relative;
+	background-color: #fff;
+	border-bottom: #e3e3e3 2rpx solid;
+	display: flex;
+	flex-direction: row;
+	padding-top:30rpx;
+	padding-bottom:30rpx;
+	font-family: Microsoft YaHei;
+}
+.message-item image{
+	width: 100rpx;
+	height: 100rpx;
+}
+.content-text {
+	font-size: 15px;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	margin-left: 15rpx;
+	padding-top: 15rpx;
+	width: 70%;
+}
+.name{
+	font-size: 32rpx;
+	font-weight: bold;
+}
+.subject{
+	font-size: 24rpx;
+	font-weight: bold;
+	margin-top: 6rpx;
+}
+.lastMsg{
+	font-size: 28rpx;
+	color: #858585;
+	font-weight:500;
+	margin-top: 20rpx;
+}
+.time{
+	font-size: 26rpx;
+	color: #858585;
+	font-weight: 500;
+	margin-top: 15rpx;
+	text-align: right;
+}
+

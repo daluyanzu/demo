@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<view class="me-header" style="width: 100%;height:190rpx;background-color: #8F8F94;"><navbar></navbar></view>
 		<view class="shareHead">
 			<view class="headimg" style="float: left;margin: 20rpx; width: 120rpx;height: 120rpx;border-radius: 50%;border: 1px black solid;">
 				<image src="../../static/bussiness-man.png" style="width: 100%;height: 100%;" mode=""></image>
@@ -31,10 +32,11 @@
 
 <script>
 	import tabbar from '../../custom-tab-bar'
+	import navbar from '../../components/nav-bar.vue'
 	
 	export default {
 		components:{
-			tabbar
+			tabbar,navbar
 		},
 		data() {
 			return {

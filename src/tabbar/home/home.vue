@@ -67,7 +67,7 @@
 	
 	.video{
 		width: 90%;
-		height: 1200rpx;
+		height: 1300rpx;
 		background-color: #FFFFFF;
 		margin: 0 auto;
 		margin-top: 50rpx;

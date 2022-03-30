@@ -4,16 +4,18 @@
 			<navbar></navbar>
 		</view>
 		
-		<view class="me-header" style="width: 100%;height:350rpx;background-color: pink;"></view>
+		<view class="me-header" style="width: 100%;height:350rpx;background-color: pink;">
+			
+		</view>
 	<view class="school-message-classify" style="width: 100%;height:100rpx;background-color: #e9e9ef;position: relative;">
 		<view  style="width: 15%;height: 60rpx;border-radius: 10rpx; background-color: #b1b1b1;position: absolute;left: 1%;top: 50%;transform: translateY(-50%);">
-			 全部
-		</view>
-		<view  style="width: 15%;height: 60rpx;border-radius: 10rpx; background-color: #b1b1b1;position: absolute;left: 17%;top: 50%;transform: translateY(-50%);">
 			 最新
 		</view>
-		<view  style="width: 15%;height: 60rpx;border-radius: 10rpx; background-color: #b1b1b1;position: absolute;left: 34%;top: 50%;transform: translateY(-50%);">
+		<view  style="width: 15%;height: 60rpx;border-radius: 10rpx; background-color: #b1b1b1;position: absolute;left: 17%;top: 50%;transform: translateY(-50%);">
 			 最热
+		</view>
+		<view  style="width: 15%;height: 60rpx;border-radius: 10rpx; background-color: #b1b1b1;position: absolute;left: 34%;top: 50%;transform: translateY(-50%);">
+			 最赞
 		</view>
 		<view @click="activityShowChange()" style="width: 80rpx;height: 80rpx;border-radius: 50%; background-color: #b1b1b1;position: absolute;right: 15rpx; top: 50%;transform: translateY(-50%);">
 			 <image src="../../../static/bussiness-man.png" style=" width: 100%;height: 100%;" mode=""></image>
@@ -42,7 +44,7 @@
 						
 							
 							<view  class="hisImg" style="width: 100rpx;height: 100rpx;border-radius: 50%;border: 1px #555555 solid;margin: 20rpx 0 0 20rpx;" >
-								<image src="../../../static/bussiness-man.png" style=" width: 100%;height: 100%;" mode=""></image>
+								<image src="../../../static/head.png" style=" width: 100%;height: 100%;" mode=""></image>
 								 {{item.name}}的动态
 							</view>
 							
@@ -63,19 +65,50 @@
 			xxx参加的新活动<br>
 			......<br>
 			......
-			<view class="attendActivity" style="width: 200rpx;height: 50rpx;border-radius: 50rpx;background-color: #7d8a05;position: absolute;top: 40rpx;left: 30%;">
+			<view class="attendActivity" @click="goattend" style="width: 200rpx;height: 50rpx;border-radius: 50rpx;background-color: #7d8a05;position: absolute;top: 40rpx;left: 30%;">
 				点击加入
 			</view>
 		</view>
 	</view>
 	
-	<view :animation="animationData" @touchstart.stop="touchStart" @touchend.stop="touchEnd" class="hisNewActiviy" style="width: 80%;height: 0; position: fixed; bottom: 0; left: 50%;transform: translateX(-50%);background-color: #217f99;">
-		<view  class="hisImg" style="width: 100rpx;height: 100rpx;border-radius: 50%;border: 1px #555555 solid;margin: 20rpx 0 0 20rpx;">
-			<image src="../../../static/bussiness-man.png" style=" width: 100%;height: 100%;" mode=""></image>
+	<view :animation="animationData" @touchstart="touchStart" @touchend="touchEnd" class="hisNewActiviy" style="width: 80%;height: 0; position: fixed; bottom: 0; left: 50%;transform: translateX(-50%);background-color: #217f99;">
+		
+		<view class="big" style="width: 70rpx;height: 70rpx;float: left; ">
+			<image @click.stop="gobig" src="../../../static/big.png" style="float: left;"  mode=""></image>
 			
 		</view>
+		<view  class="back" style="width: 70rpx;height: 70rpx;float: right; ">
+			
+			<image @click.stop="back()" src="../../../static/back1.png" @click="" mode=""></image>
+		</view>
+		<view  class="hisImg" style="width: 100rpx;height: 100rpx;border-radius: 50%;border: 1px #555555 solid;margin: 90rpx 0 0 20rpx;">
+			<image src="../../../static/bussiness-man.png" style=" width: 100%;height: 100%;" mode=""></image>
+			<!-- <image src="../../../static/退出.png" style="float: right;" mode=""></image> -->
+		</view>
+	
 		
 		{{name}}
+	</view>
+	
+	<view class="attendAct" v-show="activityFlag"  style="position: fixed;bottom: 0; width: 95%;height: 50%;left: 20rpx; background-color: #217f99;border-radius: 30rpx;">
+		<view class="actTitle" style="width: 100%;height: 200rpx;background-color: #217f99;border-radius: 30rpx;">
+			<text >##活动标题简介##</text>
+			<view class="back" @click="goBack" style="width: 80rpx;height: 80rpx;position: absolute;right: 0rpx;top: 0rpx;">
+				<image src="../../../static/back.png"  mode=""></image>
+			</view>
+		</view>
+		<view class="actContent">
+			##活动地点。。。##<br>
+			##活动时间。。。##<br>
+			##活动内容。。。##<br>
+			##活动内容。。。####活动内容。。。##<br>
+		</view>
+		<view style="border-radius: 30rpx; float: left; width: 350rpx;height: 80rpx;position: absolute;bottom: 200rpx;background-color: #038d18;" >
+			加入并分享给关注的人
+		</view>
+		<view style="border-radius: 30rpx; float: right;width: 300rpx;height: 80rpx; position: absolute;bottom: 200rpx;right: 0rpx;background-color: #038d18;" >
+			加入并分享给好友
+		</view>
 	</view>
 	 
 	</view>
@@ -87,6 +120,7 @@
 		components:{navbar},
 		data() {
 			return {
+				activityFlag:false,
 				name:'xxx',
 				startY:0,
 				flag:true,
@@ -146,6 +180,14 @@
 			}
 		},
 		methods: {
+			goattend(){
+				this.activityFlag = true
+				this.activityShow = false
+			},
+			goBack(){
+				this.activityFlag = false
+				
+			},
 			
 			showhismessage(){
 				this.show = !this.show
@@ -176,7 +218,7 @@
 			})
 			if(this.flag){
 				
-				animation.height(600).step()
+				animation.height(550).step()
 				this.flag = !this.flag
 			}
 			
@@ -186,6 +228,43 @@
 			this.animationData = animation.export()
 			
 			
+		},
+		gobig(){
+			var animation = uni.createAnimation({
+			 
+			  duration: 700,
+			  timingFunction: "ease",
+			 
+			})
+			
+				
+				animation.height(710).width(370).step()
+				
+				
+				
+				
+			
+			
+			
+			
+			
+			this.animationData = animation.export()
+			
+		},
+		back(){
+			var animation = uni.createAnimation({
+			 
+			  duration: 700,
+			  timingFunction: "ease",
+			 
+			})
+			animation.height(0).step()
+			this.flag = !this.flag
+			this.animationData = animation.export()
+			
+			if(this.show){
+				this.show = false
+			}
 		},
 		
 		touchStart(e){
@@ -204,6 +283,7 @@
 									if(Math.abs(diff)>100){
 										if(diff>0){
 											console.log("下滑...");
+											
 											var animation = uni.createAnimation({
 											 
 											  duration: 700,
@@ -232,5 +312,9 @@
 </script>
 
 <style>
+	image{
+		height: 100%;
+		width: 100%;
+	}
 
 </style>

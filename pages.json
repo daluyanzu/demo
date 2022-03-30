@@ -7,6 +7,26 @@
 			}
 		},
 		{
+		    "path" : "src/tabbar/myPage/myPage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		{
+		    "path" : "demo/demo",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		{
 		    "path" : "pages/hotList/hotList",
 		    "style" :                                                                                    
 		    {
@@ -72,16 +92,7 @@
                 "enablePullDownRefresh": false
             }
             
-        },{
-            "path" : "src/tabbar/myPage/myPage",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
         },
-		
         
          
        
@@ -103,6 +114,7 @@
             }
             
         }
+        
         
         
     ],
@@ -144,7 +156,8 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
 	},
 	
 	"tabBar": {

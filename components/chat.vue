@@ -1,12 +1,12 @@
 <template>
 	<view style="width: 100%;height:100%;">
-		<scroll-view scroll-y="true" style="height: 250rpx;">
-			<view style="border:1rpx solid #8F8F94;height: 40%; width: 100%;" v-for="item in myList" :key="item.time">
+		<scroll-view scroll-y="true" style="height: 370rpx;">
+			<view style="border-radius: 30rpx;height: 30%; width: 100%;" v-for="item in myList" :key="item.time">
 				<text v-if="item.id == '李石雪'" style="float: right;clear:both;">{{ item.id }}:&nbsp\n&nbsp&nbsp{{ item.msg }}</text>
 				<text v-if="item.id !== '李石雪'" style="float: left;clear:both;">{{ item.id }}:&nbsp\n&nbsp&nbsp{{ item.msg }}</text>
 			</view>
 		</scroll-view>
-		<view style="height: 150rpx;background-color: white;"><textarea value="" @confirm="send1" placeholder="" @input="onInput" /></view>
+		<view style="height: 170rpx;background-color: white;border:1rpx solid #333333;"><textarea value="" @confirm="send1" placeholder="" @input="onInput" /></view>
 	</view>
 </template>
 
@@ -56,6 +56,7 @@ export default {
 		};
 	},
 	methods: {
+		
 		onInput(e) {
 			clearTimeout(timer);
 

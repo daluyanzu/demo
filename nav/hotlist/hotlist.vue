@@ -15,12 +15,20 @@
 
 		<view
 			:animation="animationData"
-			@touchstart.stop="touchStart"
-			@touchend.stop="touchEnd"
+			@touchstart="touchStart"
+			@touchend="touchEnd"
 			class="hisNewActiviy"
 			style="width: 90%;height: 0; position: fixed; bottom: 0; left: 50%;transform: translateX(-50%);background-color: #217f99;border-radius: 30rpx;"
 		>
-			<view class="hot-title" style="margin-left: 50rpx;">
+		<view class="big" style="width: 70rpx;height: 70rpx;float: left;">
+			<image @click.stop="gobig" src="../../static/big.png" style="float: left;"  mode=""></image>
+			
+		</view>
+		<view  class="back" style="width: 70rpx;height: 70rpx;float: right; ">
+			
+			<image @click.stop="back()" src="../../static/back.png"  mode=""></image>
+		</view>
+			<view class="hot-title" style="margin-left: 50rpx;margin-top: 80rpx;">
 				<text
 					style="font-weight: 1000;
 			font-size: 50rpx;"
@@ -42,14 +50,14 @@
 					</view>
 					<view
 						class="gochat"
-						
-						style="margin: 80rpx 0 0 10rpx;float: left;width: 130rpx;height: 60rpx;background-color: #778821;border-radius: 10rpx;display: flex;justify-content: center;"
+						@click.stop="goChat()"
+						style=" margin: 80rpx 0 0 10rpx;float: left;width: 130rpx;height: 60rpx;background-color: #778821;border-radius: 10rpx;display: flex;justify-content: center;"
 							>
 				私聊
 					</view>
 					<view
 						class="jiaguanzhu"
-						
+						@tap.stop="gotohisPage()"
 						style="margin: 80rpx 0 0 10rpx;float: left;width: 150rpx;height: 60rpx;background-color: #778821;border-radius: 10rpx;display: flex;justify-content: center;"
 					>
 						查看主页
@@ -60,9 +68,15 @@
 				<text>##此处详细内容.....##</text>
 				<br />
 				<text>##此处详细内容.....##</text>
+				
 			</view>
 		</view>
-		<view class="guanzhubox" v-show="flag" style="width: 100%;height:200rpx ;position: fixed;top: 530rpx;left: 180rpx;">
+		
+			 
+			 
+			 
+			 
+			<!-- <view class="guanzhubox" v-show="flag" style="width: 100%;height:200rpx ;position: fixed;top: 530rpx;left: 180rpx;">
 			<view
 					class="jiaguanzhu"
 					style="margin: 100rpx 0 0 30rpx;float: left;width: 130rpx;height: 60rpx;background-color: #778821;border-radius: 10rpx;display: flex;justify-content: center;"
@@ -83,7 +97,22 @@
 				>
 					查看主页
 				</view>
+		
+		
+		
+		
+		
+		
+		</view> -->
+		<view class="chatBox" v-if="chatFlag" style="width: 90%;height: 620rpx;background-color:white;position: fixed ;top: 380rpx;left: 30rpx;border:1rpx solid #333333;border-radius: 30rpx;">
+			<view @click="changeChat" class="title" style="width: 100%;height: 10%;">
+				<text style="font-weight: 1000;
+			font-size: 50rpx;">私聊</text>
+			</view>
+			
+			<chat></chat>
 		</view>
+		
 
 		<tabbar></tabbar>
 	</view>
@@ -102,6 +131,7 @@ export default {
 	},
 	data() {
 		return {
+			chatFlag:false,
 			flag:false,
 			nav_btn: 'hotlist',
 			selected: 0,
@@ -141,12 +171,52 @@ export default {
 		};
 	},
 	methods: {
+		gobig(){
+			var animation = uni.createAnimation({
+			 
+			  duration: 700,
+			  timingFunction: "ease",
+			 
+			})
+			
+				
+				animation.height(710).width(370).step()
+				
+				
+				
+				
+			
+			
+			
+			
+			
+			this.animationData = animation.export()
+			
+		},
+		back(){
+			var animation = uni.createAnimation({
+			 
+			  duration: 700,
+			  timingFunction: "ease",
+			 
+			})
+			animation.height(0).step()
+			
+			this.animationData = animation.export()
+			
+			
+		},
+		changeChat(){
+			this.chatFlag=false
+		},
 		
 		gotohisPage() {
-			console.log(123);
+			uni.navigateTo({
+				url:'../../pages/otherpage/otherpage'
+			})
 		},
 		goChat() {
-			console.log(123);
+			this.chatFlag = true
 			// var animation = uni.createAnimation({
 
 			//   duration: 700,
@@ -213,6 +283,10 @@ export default {
 </script>
 
 <style>
+	image{
+		height: 100%;
+		width: 100%;
+	}
 .hot-item {
 	width: 95%;
 	height: 250rpx;

@@ -1,0 +1,17 @@
+{
+    "id": "lemon-floatAni",
+    "name": "浮动动画",
+    "version": "0.3",
+    "description": "简单生成浮动动画",
+    "keywords": [
+        "前端",
+        "动画",
+        "浮动"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}
